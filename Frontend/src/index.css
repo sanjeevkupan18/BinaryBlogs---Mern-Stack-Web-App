@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --bb-bg-1: #0e1226;
+  --bb-bg-2: #1a143d;
+  --bb-bg-3: #0f2c4c;
+  --bb-accent: #ffb454;
+  --bb-accent-2: #6ee7ff;
+  --bb-ink: #f7f4ff;
+  --bb-card: rgba(255, 255, 255, 0.08);
+  --bb-card-border: rgba(255, 255, 255, 0.18);
+  --bb-nav: rgba(255, 255, 255, 0.1);
+  --bb-muted: rgba(247, 244, 255, 0.75);
+  --bb-muted-2: rgba(247, 244, 255, 0.6);
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  background: radial-gradient(1200px circle at top, #1b2351 0%, #0f1228 60%, #090c18 100%);
+  color: var(--bb-ink);
+}
+
+body[data-theme="light"] {
+  --bb-bg-1: #fef9f3;
+  --bb-bg-2: #f5f7ff;
+  --bb-bg-3: #e9f7ff;
+  --bb-accent: #ff8a3d;
+  --bb-accent-2: #2aa7c7;
+  --bb-ink: #1f2433;
+  --bb-card: rgba(255, 255, 255, 0.8);
+  --bb-card-border: rgba(15, 23, 42, 0.08);
+  --bb-nav: rgba(255, 255, 255, 0.75);
+  --bb-muted: rgba(31, 36, 51, 0.75);
+  --bb-muted-2: rgba(31, 36, 51, 0.6);
+  background: radial-gradient(1200px circle at top, #ffffff 0%, #f2f6ff 55%, #e8f4ff 100%);
+  color: var(--bb-ink);
+}
+
+.font-display {
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+.bb-bg {
+  background: linear-gradient(135deg, var(--bb-bg-1), var(--bb-bg-2), var(--bb-bg-3));
+}
+
+.bb-text {
+  color: var(--bb-ink);
+}
+
+.bb-muted {
+  color: var(--bb-muted);
+}
+
+.bb-muted-2 {
+  color: var(--bb-muted-2);
+}
+
+.bb-card {
+  background: var(--bb-card);
+  border-color: var(--bb-card-border);
+}
+
+.bb-nav {
+  background: var(--bb-nav);
+  border-color: var(--bb-card-border);
+}
+
+.bb-input {
+  width: 100%;
+  border-radius: 1rem;
+  border: 1px solid var(--bb-card-border);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--bb-ink);
+  outline: none;
+}
+
+.bb-input::placeholder {
+  color: var(--bb-muted-2);
+}
+
+.bb-doc {
+  position: relative;
+  border-radius: 1.5rem;
+  border: 1px solid var(--bb-card-border);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 1.5rem;
+  box-shadow: 0 12px 30px rgba(6, 10, 30, 0.25);
+}
+
+.bb-doc::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), transparent 60%);
+  pointer-events: none;
+}
+
+.bb-doc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.bb-doc-title {
+  font-family: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--bb-ink);
+}
+
+.bb-doc-meta {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--bb-muted-2);
+}
+
+.bb-doc-body {
+  color: var(--bb-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  min-height: 4.5rem;
+}
+
+.bb-doc-footer {
+  margin-top: 1.25rem;
+}
+
+.bb-doc-tag {
+  border-radius: 999px;
+  border: 1px solid var(--bb-card-border);
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  color: var(--bb-ink);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.bb-doc-detail {
+  border-radius: 2rem;
+  border: 1px solid var(--bb-card-border);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  box-shadow: 0 18px 40px rgba(6, 10, 30, 0.25);
+}
+
+.bb-text-accent {
+  color: var(--bb-accent);
+}
+
+.bb-text-accent-2 {
+  color: var(--bb-accent-2);
+}
+
+.bb-glow {
+  box-shadow: 0 0 30px rgba(110, 231, 255, 0.2), 0 0 60px rgba(255, 180, 84, 0.15);
+}
+
+.bb-hero-grid {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.05) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.bb-fade-up {
+  animation: bbFadeUp 0.9s ease-out both;
+}
+
+.bb-fade-up-delayed {
+  animation: bbFadeUp 1s ease-out both;
+  animation-delay: 0.15s;
+}
+
+.bb-fade-up-more {
+  animation: bbFadeUp 1.1s ease-out both;
+  animation-delay: 0.3s;
+}
+
+.bb-float {
+  animation: bbFloat 7s ease-in-out infinite;
+}
+
+.bb-sweep {
+  animation: bbSweep 9s ease-in-out infinite;
+}
+
+@keyframes bbFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bbFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes bbSweep {
+  0% {
+    transform: translateX(-10%);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-10%);
+    opacity: 0.4;
+  }
+}
